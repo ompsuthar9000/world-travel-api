@@ -42,7 +42,9 @@ app.use("/api/v1/users", userRoute);
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/review", reviewRoutes);
 app.use("/api/v1/booking", bookingRoutes);
-
+app.get("/",(req,res)=>{
+  res.json("working fine")
+})
 app.listen(port, () => {
   connect();
   console.log("server listening on port", port);
